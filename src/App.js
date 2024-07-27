@@ -152,9 +152,9 @@ const RuedaDeLaVida = () => {
   };
 
   return (
-    <div className="flex flex-col items-center p-4">
-      <h2 className="text-2xl font-bold mb-4 text-center">Rueda de la Vida</h2>
-      <div className="flex justify-center mb-4">
+    <div className="flex flex-col items-center p-4 w-full max-w-4xl mx-auto">
+     <h2 className="text-2xl font-bold mb-4 text-center w-full">Rueda de la Vida</h2>
+      <div className="flex justify-center mb-4 w-full">
         {renderWheel()}
       </div>
       <button 
