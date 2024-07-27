@@ -153,25 +153,25 @@ const RuedaDeLaVida = () => {
 
   return (
     <div className="flex flex-col items-center p-4 w-full max-w-4xl mx-auto">
-     <h2 className="text-2xl font-bold mb-4 text-center w-full">Rueda de la Vida</h2>
+      <h2 className="text-2xl font-bold mb-4 text-center w-full">Rueda de la Vida</h2>
       <div className="flex justify-center mb-4 w-full">
         {renderWheel()}
       </div>
-      <button 
-        onClick={downloadPDF} 
-        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mb-4"
-      >
-        Descargar PDF
-      </button>
-      <button 
-        onClick={() => alert(generateRecommendations().join('\n\n'))} 
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4"
-      >
-        Ver Recomendaciones
-      </button>
-      <div className="w-full max-w-md">
+      <div className="flex flex-col items-center w-full max-w-md">
+        <button 
+          onClick={downloadPDF} 
+          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mb-4 w-full"
+        >
+          Descargar PDF
+        </button>
+        <button 
+          onClick={() => alert(generateRecommendations().join('\n\n'))} 
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 w-full"
+        >
+          Ver Recomendaciones
+        </button>
         {areas.map((area, index) => (
-          <div key={index} className="mb-4 flex flex-wrap items-center">
+          <div key={index} className="mb-4 flex flex-wrap items-center w-full">
             <input
               type="text"
               value={area.nombre}
@@ -197,7 +197,7 @@ const RuedaDeLaVida = () => {
             </button>
           </div>
         ))}
-        <button onClick={addArea} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button onClick={addArea} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
           Agregar Área
         </button>
       </div>
